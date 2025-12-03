@@ -19,27 +19,39 @@ public class Day2_2
         Console.WriteLine(invalid);
     }
     
-    // for every num:
-        // iterate forward and save every num in "new" array until curr index = substring(0)
-    // found:
-        // check if toString.length => "new".length * 2
-        // true:
-            // check if substring(curr, "new".length * 2) = "new" array
-                // true:
-                    // invalid ID, duplicate found
-        // false:
-            // no repeat = valid ID
-            
-    // not found (out of bounds/null):
-        // valid ID = ignore and move onto next num 
-
     private static bool IsInvalid(long num)
     {
-        string s = num.ToString();
-        if (s.Length % 2 == 0)
+        string sNum = num.ToString();
+        int sLength = sNum.Length;
+
+        for (int i = 1; i <= sLength / 2; i++)
         {
-            return s.Substring(0, s.Length / 2) == s.Substring(s.Length / 2);
+            if (sLength % i == 0)
+            {
+                if (string.Concat(Enumerable.Repeat(sNum.Substring(0, i), sLength / i)) == sNum)
+                {
+                    return true;
+                }
+            }
         }
         return false;
     }
+
+    #region Old attempt
+    // Forgot that the entire word has to be made up of repeated sequences
+    
+    // private static bool IsInvalid(long num)
+    // {
+    //     string s = num.ToString();
+    //
+    //     for (int i = 1; i <= s.Length / 2; i++)
+    //     {
+    //         if (s.Substring(i, i) == s.Substring(0, i))
+    //         {
+    //             return true;
+    //         }
+    //     }
+    //     return false;
+    // }
+    #endregion
 }
