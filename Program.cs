@@ -1,12 +1,13 @@
 using AoC_25.Day1;
 using AoC_25.Day2;
+using AoC_25.Day3;
 
 namespace AoC_25;
 
-public class Program
+public static class Program
 {
     public static void Main(string[] args)
     {
-        Day2_2.Exec();
+        Day3_1.Exec();
     }
 }

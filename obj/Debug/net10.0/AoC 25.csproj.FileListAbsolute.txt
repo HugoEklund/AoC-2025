@@ -1,0 +1,18 @@
+C:\Users\SEEKLUNDHU\Documents\AoC 25\obj\Debug\net10.0\AoC 25.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SEEKLUNDHU\Documents\AoC 25\obj\Debug\net10.0\AoC 25.AssemblyInfoInputs.cache
+C:\Users\SEEKLUNDHU\Documents\AoC 25\obj\Debug\net10.0\AoC 25.AssemblyInfo.cs
+C:\Users\SEEKLUNDHU\Documents\AoC 25\obj\Debug\net10.0\AoC 25.csproj.CoreCompileInputs.cache
+C:\Users\SEEKLUNDHU\Documents\AoC 25\obj\Debug\net10.0\AoC 25.sourcelink.json
+C:\Users\SEEKLUNDHU\Documents\AoC 25\bin\Debug\net10.0\AoC 25.exe
+C:\Users\SEEKLUNDHU\Documents\AoC 25\bin\Debug\net10.0\AoC 25.deps.json
+C:\Users\SEEKLUNDHU\Documents\AoC 25\bin\Debug\net10.0\AoC 25.runtimeconfig.json
+C:\Users\SEEKLUNDHU\Documents\AoC 25\bin\Debug\net10.0\AoC 25.dll
+C:\Users\SEEKLUNDHU\Documents\AoC 25\bin\Debug\net10.0\AoC 25.pdb
+C:\Users\SEEKLUNDHU\Documents\AoC 25\obj\Debug\net10.0\AoC 25.dll
+C:\Users\SEEKLUNDHU\Documents\AoC 25\obj\Debug\net10.0\refint\AoC 25.dll
+C:\Users\SEEKLUNDHU\Documents\AoC 25\obj\Debug\net10.0\AoC 25.pdb
+C:\Users\SEEKLUNDHU\Documents\AoC 25\obj\Debug\net10.0\AoC 25.genruntimeconfig.cache
+C:\Users\SEEKLUNDHU\Documents\AoC 25\obj\Debug\net10.0\ref\AoC 25.dll
+C:\Users\SEEKLUNDHU\Documents\AoC 25\bin\Debug\net10.0\Day1\input.txt
+C:\Users\SEEKLUNDHU\Documents\AoC 25\bin\Debug\net10.0\Day2\input.txt
+C:\Users\SEEKLUNDHU\Documents\AoC 25\bin\Debug\net10.0\Day3\input.txt

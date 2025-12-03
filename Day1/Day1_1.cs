@@ -6,8 +6,7 @@ public class Day1_1
     {
         int zeroes = 0;
         int pos = 50;
-        var input = File.ReadLines("Day1/input.txt");
-        foreach (var line in input)
+        foreach (var line in File.ReadLines("Day1/input.txt"))
         {
             string cmd = line.Substring(0, 1);
             int num = int.Parse(line.Substring(1));
