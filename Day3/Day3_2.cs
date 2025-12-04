@@ -1,6 +1,6 @@
 namespace AoC_25.Day3;
 
-public static class Day3_1
+public static class Day3_2
 {
     public static void Exec()
     {
