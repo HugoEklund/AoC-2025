@@ -8,26 +8,39 @@ public static class Day4_1
         int rows = lines.Length;
         int columns = lines[0].Length;
         int accessible = 0;
-        
+
+        var directions = new (int adjR, int adjC)[]
+        {
+            (-1, -1), (-1, 0), (-1, 1),
+            (0, -1), (0, 1),
+            (1, -1), (1, 0), (1, 1)
+        };
+
         for (int r = 0; r < rows; r++)
         {
             for (int c = 0; c < columns; c++)
             {
+                if (lines[r][c] != '@') continue;
                 int rolls = 0;
-                for (int i = 0; i < 8; i++)
+
+                foreach (var (adjR, adjC) in directions)
                 {
-                    if (lines[r][c] == '@')
+                    int newR = r + adjR;
+                    int newC = c + adjC;
+
+                    if ((uint) newR < (uint) rows && (uint) newC < (uint) columns && lines[newR][newC] == '@')
                     {
                         rolls++;
                     }
                 }
-                
+
                 if (rolls < 4)
                 {
                     accessible++;
                 }
             }
         }
+
         Console.WriteLine(accessible);
     }
 }

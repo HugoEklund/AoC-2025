@@ -4,24 +4,43 @@ public static class Day3_2
 {
     public static void Exec()
     {
-        int totSum = 0;
+        long totSum = 0;
+        
+        // 2 actions: keep or remove
+        // leftmost values have more impact => want bigger nums here
+        // => shift larger numbers left
+        // for each num:
+            // if num < num.next
+                // delete
 
         foreach (var row in File.ReadLines("Day3/input.txt"))
         {
-            int[] nums = row.Select(c => c - '0').ToArray();
-            int highestPair = 0;
-            for (int i = 0; i < row.Length - 1; i++)
+            
+            var nums = row.Select(c => c - '0').ToList();
+            int dels = nums.Count - 12;
+
+            for (int i = 0; i < nums.Count - 1 && dels > 0;)
             {
-                for (int j = i + 1; j < row.Length; j++)
+                if (nums[i] < nums[i + 1])
                 {
-                    int currPair = nums[i] * 10 + nums[j];
-                    if (currPair > highestPair)
-                    {
-                        highestPair = currPair;
-                    }
+                    nums.RemoveAt(i);
+                    dels--;
+                    if (i > 0) i--;
+                }
+                else
+                {
+                    i++;
                 }
             } 
-            totSum += highestPair;
+            while (nums.Count > 0 && dels > 0)
+            {
+                nums.RemoveAt(nums.Count - 1);
+                dels--;
+            }
+
+            long newValue = nums.Aggregate<int, long>(0, (current, i) => current * 10 + i);
+
+            totSum += newValue;
         }
         Console.WriteLine(totSum);
     }

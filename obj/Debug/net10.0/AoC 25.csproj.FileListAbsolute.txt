@@ -16,3 +16,4 @@ C:\Users\SEEKLUNDHU\Documents\AoC 25\obj\Debug\net10.0\ref\AoC 25.dll
 C:\Users\SEEKLUNDHU\Documents\AoC 25\bin\Debug\net10.0\Day1\input.txt
 C:\Users\SEEKLUNDHU\Documents\AoC 25\bin\Debug\net10.0\Day2\input.txt
 C:\Users\SEEKLUNDHU\Documents\AoC 25\bin\Debug\net10.0\Day3\input.txt
+C:\Users\SEEKLUNDHU\Documents\AoC 25\bin\Debug\net10.0\Day4\input.txt
