@@ -1,0 +1,50 @@
+
+# Build output
+bin/
+obj/
+
+# Rider / IntelliJ IDEA
+.idea/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# NuGet packages
+*.nupkg
+packages/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# OS-specific files
+Thumbs.db
+.DS_Store
+
+# Build artifacts
+*.dll
+*.exe
+*.pdb
+
+# Publish output
+publish/
+
+# Coverage reports
+coverage/
+*.coverage
+*.coveragexml
+
+# Cache folders
+__pycache__/
+*.pyc
+
+# Other IDE configs
+*.iml
+
+# Optional: if you use dotnet tools
+tools
