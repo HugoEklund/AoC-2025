@@ -11,6 +11,6 @@ public static class Program
 {
     public static void Main(string[] args)
     {
-        Day6_1.Exec();
+        Day6_2.Exec();
     }
 }

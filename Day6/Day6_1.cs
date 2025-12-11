@@ -4,20 +4,26 @@ public static class Day6_1
 {
     public static void Exec()
     {
-        int totalSum = 0;
-        int[] sum = null;
-        int[] prod = null;
+        long totalSum = 0;
+        long[]? sum = null;
+        long[]? prod = null;
         
         foreach (var row in File.ReadLines("Day6/input.txt"))
         {
             var cols = row.Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries);
 
-            if (int.TryParse(cols[0], out _) == null)
+            if (int.TryParse(cols[0], out _))
             {
                 for (int i = 0; i < cols.Length; i++)
                 {
-                    int num = int.Parse(cols[i]);
+                    long num = int.Parse(cols[i]);
                     if (sum == null)
+                    {
+                        sum = new long[cols.Length];
+                        prod = new long[cols.Length];
+                    }
+
+                    if (sum[i] == 0 && prod[i] == 0)
                     {
                         sum[i] = num;
                         prod[i] = num;
