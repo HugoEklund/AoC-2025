@@ -13,7 +13,7 @@ public static class Day3_2
             // if num < num.next
                 // delete
 
-        foreach (var row in File.ReadLines("Day3/input.txt"))
+        foreach (var row in File.ReadLines("Day3/input.txt.txt"))
         {
             
             var nums = row.Select(c => c - '0').ToList();

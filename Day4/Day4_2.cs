@@ -4,7 +4,7 @@ public static class Day4_2
 {
     public static void Exec()
     {
-        var lines = File.ReadAllLines("Day4/input.txt");
+        var lines = File.ReadAllLines("Day4/input.txt.txt");
         int rows = lines.Length;
         int columns = lines[0].Length;
         int removedRolls = 0;

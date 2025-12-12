@@ -5,41 +5,42 @@ public static class Day6_2
     public static void Exec()
     {
         long totalSum = 0;
-        string tempString = "";
-        long tempNum = 0;
-        var input = File.ReadAllLines("Day6/exampleInput.txt");
-        var someSums = new long[input[0].Length - 1];
+        var input = File.ReadAllLines("Day6/input.txt.txt");
+        var currBlockNums = new List<long>();
         
         for (int col = input[0].Length - 1; col >= 0; col--)
         {
-            char operand = input[input.Length - 1][col];
+            string tempString = "";
+            
             for (int row = 0; row < input.Length - 1; row++)
             {
-                if (operand == ' ') continue;
                 if (char.IsDigit(input[row][col]))
                 {
                     tempString += input[row][col];
                 }
             }
-            if (tempString != "")
+            if (tempString.Length > 0)
             {
-                tempNum = long.Parse(tempString);
+                currBlockNums.Add(long.Parse(tempString));
             }
+            char operand = input[^1][col];
 
-            if (operand == '+')
+            if (operand == '+' || operand == '*')
             {
-                someSums[col] += tempNum;
-                tempString = "";
-            }
-            else
-            {
-                someSums[col] *= tempNum;
-                tempString = "";
-            }
-
-            foreach (var sum in someSums)
-            {
-                totalSum += sum;
+                long tempNum = (operand == '+' ? 0 : 1);
+                foreach (var num in currBlockNums)
+                {
+                    if (operand == '+')
+                    {
+                        tempNum += num;
+                    }
+                    else
+                    {
+                        tempNum *= num;
+                    }
+                }
+                totalSum += tempNum;
+                currBlockNums.Clear();
             }
         }
         Console.WriteLine(totalSum);

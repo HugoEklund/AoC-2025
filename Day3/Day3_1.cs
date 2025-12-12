@@ -6,7 +6,7 @@ public static class Day3_1
     {
         int totSum = 0;
 
-        foreach (var row in File.ReadLines("Day3/input.txt"))
+        foreach (var row in File.ReadLines("Day3/input.txt.txt"))
         {
             int[] nums = row.Select(c => c - '0').ToArray();
             int highestPair = 0;

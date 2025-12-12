@@ -4,7 +4,7 @@ public static class Day5_2
 {
     public static void Exec()
     {
-        var lines = File.ReadAllLines("Day5/input.txt");
+        var lines = File.ReadAllLines("Day5/input.txt.txt");
         int sepIndex = Array.FindIndex(lines, string.IsNullOrWhiteSpace);
         var someRanges = lines[..sepIndex];
         var someSortedRanges = new List<(long start, long end)>();

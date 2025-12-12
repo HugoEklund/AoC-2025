@@ -5,7 +5,7 @@ public static class Day5_1
     public static void Exec()
     {
         int fresh = 0;
-        var lines = File.ReadAllLines("Day5/input.txt");
+        var lines = File.ReadAllLines("Day5/input.txt.txt");
         int sepIndex = Array.FindIndex(lines, string.IsNullOrWhiteSpace);
         var someRanges = lines[..sepIndex];
         var someIngredientIDs = lines[(sepIndex + 1)..];

@@ -8,7 +8,7 @@ public static class Day6_1
         long[]? sum = null;
         long[]? prod = null;
         
-        foreach (var row in File.ReadLines("Day6/input.txt"))
+        foreach (var row in File.ReadLines("Day6/input.txt.txt"))
         {
             var cols = row.Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries);
 

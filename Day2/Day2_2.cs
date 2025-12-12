@@ -5,7 +5,7 @@ public static class Day2_2
     public static void Exec()
     {
         long invalid = 0;
-        var input = File.ReadAllText("Day2/input.txt");
+        var input = File.ReadAllText("Day2/input.txt.txt");
         var range = input.Split(",");
         
         foreach (var num in range)
