@@ -1,11 +1,11 @@
-namespace AoC_25.Day6;
+namespace AoC_25;
 
 public static class Day6_2
 {
     public static void Exec()
     {
         long totalSum = 0;
-        var input = File.ReadAllLines("Day6/input.txt.txt");
+        var input = File.ReadAllLines("2025/Day6/input.txt");
         var currBlockNums = new List<long>();
         
         for (int col = input[0].Length - 1; col >= 0; col--)

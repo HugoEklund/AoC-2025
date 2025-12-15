@@ -1,4 +1,4 @@
-namespace AoC_25.Day3;
+namespace AoC_25;
 
 public static class Day3_2
 {
@@ -13,7 +13,7 @@ public static class Day3_2
             // if num < num.next
                 // delete
 
-        foreach (var row in File.ReadLines("Day3/input.txt.txt"))
+        foreach (var row in File.ReadLines("2025/Day3/input.txt"))
         {
             
             var nums = row.Select(c => c - '0').ToList();

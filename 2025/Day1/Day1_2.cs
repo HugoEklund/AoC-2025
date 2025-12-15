@@ -1,4 +1,4 @@
-namespace AoC_25.Day1;
+namespace AoC_25;
 
 public static class Day1_2
 {
@@ -6,7 +6,7 @@ public static class Day1_2
     {
         int zeroes = 0;
         int pos = 50;
-        foreach (var line in File.ReadLines("Day1/input.txt.txt"))
+        foreach (var line in File.ReadLines("2025/Day1/input.txt"))
         {
             string cmd = line.Substring(0, 1);
             int num = int.Parse(line.Substring(1));

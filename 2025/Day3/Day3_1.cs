@@ -1,4 +1,4 @@
-namespace AoC_25.Day3;
+namespace AoC_25;
 
 public static class Day3_1
 {
@@ -6,7 +6,7 @@ public static class Day3_1
     {
         int totSum = 0;
 
-        foreach (var row in File.ReadLines("Day3/input.txt.txt"))
+        foreach (var row in File.ReadLines("2025/Day3/input.txt"))
         {
             int[] nums = row.Select(c => c - '0').ToArray();
             int highestPair = 0;

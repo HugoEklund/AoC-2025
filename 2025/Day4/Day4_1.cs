@@ -1,10 +1,10 @@
-namespace AoC_25.Day4;
+namespace AoC_25;
 
 public static class Day4_1
 {
     public static void Exec()
     {
-        var lines = File.ReadAllLines("Day4/input.txt.txt");
+        var lines = File.ReadAllLines("2025/Day4/input.txt");
         int rows = lines.Length;
         int columns = lines[0].Length;
         int accessible = 0;

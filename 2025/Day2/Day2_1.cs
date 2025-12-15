@@ -1,11 +1,11 @@
-namespace AoC_25.Day2;
+namespace AoC_25;
 
 public static class Day2_1
 {
     public static void Exec()
     {
         long invalid = 0;
-        var input = File.ReadAllText("Day2/input.txt.txt");
+        var input = File.ReadAllText("2025/Day2/input.txt");
         var range = input.Split(",");
         
         foreach (var num in range)

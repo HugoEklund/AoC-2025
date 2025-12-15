@@ -1,4 +1,4 @@
-namespace AoC_25.Day6;
+namespace AoC_25;
 
 public static class Day6_1
 {
@@ -8,7 +8,7 @@ public static class Day6_1
         long[]? sum = null;
         long[]? prod = null;
         
-        foreach (var row in File.ReadLines("Day6/input.txt.txt"))
+        foreach (var row in File.ReadLines("2025/Day6/input.txt"))
         {
             var cols = row.Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries);
 

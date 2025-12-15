@@ -1,14 +1,12 @@
-namespace AoC_25.Day5;
+namespace AoC_25;
 
-public static class Day5_1
+public static class Day5_2
 {
     public static void Exec()
     {
-        int fresh = 0;
-        var lines = File.ReadAllLines("Day5/input.txt.txt");
+        var lines = File.ReadAllLines("2025/Day5/input.txt");
         int sepIndex = Array.FindIndex(lines, string.IsNullOrWhiteSpace);
         var someRanges = lines[..sepIndex];
-        var someIngredientIDs = lines[(sepIndex + 1)..];
         var someSortedRanges = new List<(long start, long end)>();
 
         foreach (var range in someRanges)
@@ -41,36 +39,12 @@ public static class Day5_1
         }
         someMergedRanges.Add((currStart, currEnd));
         
-        var someStarts = new long[someMergedRanges.Count];
-        var someEnds   = new long[someMergedRanges.Count];
-        
-        for (int i = 0; i < someMergedRanges.Count; i++)
+        long totalFresh = 0;
+        foreach (var (start, end) in someMergedRanges)
         {
-            someStarts[i] = someMergedRanges[i].start;
-            someEnds[i]   = someMergedRanges[i].end;
-        }
-        
-        foreach (var start in someIngredientIDs)
-        {
-            long id = long.Parse(start);
-
-            int searchRes = Array.BinarySearch(someStarts, id);
-            bool isInside;
-                
-            if (searchRes >= 0)
-            {
-                isInside = (id <= someEnds[searchRes]);
-            }
-            else // gav upp här lol
-            {
-                int ins  = ~searchRes;
-                int cand = ins - 1;
-                isInside = (cand >= 0 && id <= someEnds[cand]);
-            }
-
-            if (isInside) fresh++;
+            totalFresh += (end - start + 1);
         }
 
-        Console.WriteLine(fresh);
+        Console.WriteLine(totalFresh);
     }
 }
